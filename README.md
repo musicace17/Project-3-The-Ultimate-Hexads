@@ -1,8 +1,8 @@
 # Musical Insights Dashboard
-Dashboard page with multiple charts. Potential canva template for the presentation: https://www.slidescarnival.com/design/music-club/46664
+Dashboard page with multiple charts.
 
 ## Overview:
-Create a dynamic and interactive Musical Insights Dashboard that leverages the an API to showcase trends and insights in the world of music. Options: https://www.theaudiodb.com/, https://developer.spotify.com/documentation/web-api/concepts/spotify-uris-ids, https://ddmal.music.mcgill.ca/research/The_Music_Listening_Histories_Dataset_(MLHD)/, etc. 
+Create a dynamic and interactive Musical Insights Dashboard that leverages the an API to showcase trends and insights in the world of music. 
 
 
 1. Bar Chart: Top-rated genres or artists based on user preferences.
@@ -11,8 +11,8 @@ Create a dynamic and interactive Musical Insights Dashboard that leverages the a
 
 ## Features:
 
-1. Flask-powered API to fetch and handle data from the Spotify API, storing it in a database.
-2. SQLite or MongoDB database to store the collected Spotify data.
+1. Flask-powered API to fetch and handle data from the API, storing it in a database.
+2. SQLite or MongoDB database to store the collected data.
 3. JavaScript library (one that we did not cover in class) for dynamic data visualizations.
 4. User-driven interactions such as dropdowns to allow users to filter data by genres, artists, or time periods.
 
@@ -23,7 +23,7 @@ Implementing endpoints for fetching and storing data.
 
 2. **Frontend (Visualizations):**
 Creating dynamic and engaging data visualizations.
-Integrating an additional JS library for advanced visualizations. Idea: https://plotly.com/javascript/
+Integrating an additional JS library for advanced visualizations. 
 
 3. **Frontend (User Interaction):**
 Designing and implementing the user interface.
