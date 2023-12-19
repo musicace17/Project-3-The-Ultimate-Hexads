@@ -11,11 +11,12 @@ Create a dynamic and interactive Musical Insights Dashboard that leverages the a
 
 ## Features:
 
-Store dataset in a database. [SQLite or MongoDB database to store the collected Spotify data.]
-Flask-powered API to fetch and handle data the database and have data in JSON format at a url.
-Using JavaScript, connect & fetch data from Flask powered API and store the array in a variable.
-Filter the data and prep for visualization including a JavaScript library (one that we did not cover in class) for dynamic data visualizations.
-User-driven interactions such as dropdowns to allow users to filter data by genres, artists, or time periods. 
+### Store dataset in a database. [SQLite or MongoDB database to store the collected Spotify data.]
+### Flask-powered API to fetch and handle data the database and have data in JSON format at a url.
+### Using JavaScript, connect & fetch data from Flask powered API and store the array in a variable.
+### Filter the data and prep for visualization including a JavaScript library (one that we did not cover in class) for dynamic data visualizations.
+### User-driven interactions such as dropdowns to allow users to filter data by genres, artists, or time periods. 
+
 ## Team Responsibilities:
 1. **Backend (Flask API):**
 Creating the Flask-powered API for data retrieval.
