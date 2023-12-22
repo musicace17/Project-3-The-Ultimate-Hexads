@@ -2,41 +2,19 @@
 Dashboard page with multiple charts.
 
 ## Overview:
-Create a dynamic and interactive Musical Insights Dashboard that leverages the an API to showcase trends and insights in the world of music. 
+Create a dynamic and interactive Musical Insights Dashboard that leverages our Flask-powered API to showcase trends and insights in the world of music. User will have the option to filter by date and see visualizations of music insights for that day.
 
-
-1. Bar Chart: Top-rated genres or artists based on user preferences.
-2. Pie Chart: Distribution of musical genres in the dataset.
-3. Line Chart: Trends in the release of music over the years.
+1. World Map: showing countries featured in dataset - possibly hovertext with top song
+2. Bar Chart: top 10 artists for the date chosen
+3. Pie Chart: top genres for the date chosen
+4. Mystery Chart: danceability factor of top songs from the date chosen
 
 ## Features:
 
-1. Store dataset in a database. [SQLite or MongoDB database to store the collected Spotify data.]
+1. Store dataset in a database. [SQLite database to store the collected Spotify data.]
 2. Flask-powered API to fetch and handle data the database and have data in JSON format at a url.
 3. Using JavaScript, connect & fetch data from Flask powered API and store the array in a variable.
 4. Filter the data and prep for visualization including a JavaScript library (one that we did not cover in class) for dynamic data visualizations.
 5. User-driven interactions such as dropdowns to allow users to filter data by genres, artists, or time periods. 
 
-## Team Responsibilities:
-1. **Backend (Flask API):**
-Creating the Flask-powered API for data retrieval.
-Implementing endpoints for fetching and storing data.
-
-2. **Frontend (Visualizations):**
-Creating dynamic and engaging data visualizations.
-Integrating an additional JS library for advanced visualizations. 
-
-3. **Frontend (User Interaction):**
-Designing and implementing the user interface.
-Ensuring responsiveness and user-driven interactions.
-
-4. **Database:**
-Handling database setup and management.
-Ensuring data integrity and security.
-
-5. **Debug:**
-Testing the application for functionality and user experience.
-Debugging and identifying issues.
-
-6. **Documentation:**
-Creating and maintaining documentation for the project including a detailed README file and slide presentation template for team to contribute to throughout project progress. Ensures that the full repository is organized and well-documented, making it easy for grader to understand upon submission deadline.
+At the outset, the whole team will collaboratively work together during class project sessions to complete the initial steps of environment setup, data handling, and database setup. Following this collaborative effort, each member of the team will individually create a distinct visualization for the dashboard. We will then collaborate as a team to conduct user interface testing. Throughout the project, each team member is accountable for regularly updating the project presentation slides with their respective visualizations and insights. 
