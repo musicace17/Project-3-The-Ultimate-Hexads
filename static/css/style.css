@@ -4,9 +4,22 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-image: url("headphones.png")
+    background-image: url("background_pink.png")
   }
 
 div {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+div.col-md-12 {
+  background-color: white;
+}
+
+div.well {
+  background-color: white;
+}
+
+#worldMap {
+  height: 50vh;
+  width: 60vw;
 }
