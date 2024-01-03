@@ -8,7 +8,7 @@ from flask import Flask, jsonify, render_template
 
 # Creating an app, being sure to pass __name__
 
-engine = create_engine("sqlite:///Resources/music_database.sqlite")
+engine = create_engine("sqlite:///resources/music_database.sqlite")
 
 # Reflecting an existing database into a new model
 Base = automap_base()

@@ -12,6 +12,7 @@ const dataPromise = d3.json(url);
 
 // Fetch the JSON data 
 d3.json(url).then(function(data) {
+    // Handle the initial data fetch if needed
 });
 
 // create init function
@@ -62,7 +63,6 @@ function getUniqueValuesWithLoop(inputArray) {
 
     return uniqueValuesArray;
 }
-
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // create worldMap function
@@ -250,4 +250,4 @@ function optionChanged(date) {
 };
 
 // call init function to set initial graphs
-init ();
+init();
