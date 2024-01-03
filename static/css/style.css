@@ -12,7 +12,8 @@ div {
 }
 
 div.col-md-12 {
-  background-color: white;
+  background-color: transparent;
+  margin: auto
 }
 
 div.well {
@@ -23,3 +24,4 @@ div.well {
   height: 50vh;
   width: 60vw;
 }
+

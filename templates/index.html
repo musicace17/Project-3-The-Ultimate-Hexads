@@ -27,20 +27,31 @@
             <h5>Date:</h5>
             <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
-        <div class="col-md-5">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <h1> Featured Countries </h1>
           <div id="world-map"></div>
         </div>
-        <div class="col-md-5">
+        <div class="row">
+        <div class="col-md-12">
+          <h1> Top 10 Artists of the Day </h1>
           <div id="bar"></div>
         </div>
-      </div>
-      <div class="row">
+        <div class="row">
         <div class="col-md-12">
+          <h1> Top 10 Genres of the Day </h1>
           <div id="pieChart"></div>
+        </div>
+        <div class="row">
+        <div class="col-md-12">
+          <h1> Danceability of Today's Top Songs </h1>
+          <div id="plotbubble"></div>
       </div>
     </div>
 
-    <div id="plotbubble"></div>
+   
+   
 
     <p><b>JSON Music Data here -></b> <a href="/api/v1.0/spotify_music_data" target="_blank"> /api/v1.0/spotify_music_data</a> </p>
 
