@@ -8,8 +8,10 @@
     <title>Musical Insights</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
 </head>
   
+
 <body>
 
   <div class="container">
@@ -24,13 +26,6 @@
           <div class="well">
             <h5>Date:</h5>
             <select id="selDataset" onchange="optionChanged(this.value)"></select>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Countries</h3>
-            </div>
-            <div id="countries-list" class="panel-body"></div>
-          </div>
         </div>
         <div class="col-md-5">
           <div id="world-map"></div>
@@ -41,20 +36,19 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div id="pie"></div>
-        </div>
+          <div id="pieChart"></div>
       </div>
     </div>
+
+    <div id="plotbubble"></div>
 
     <p><b>JSON Music Data here -></b> <a href="/api/v1.0/spotify_music_data" target="_blank"> /api/v1.0/spotify_music_data</a> </p>
 
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!-- <script src="./static/js/app.js"></script> -->
     <script src="../static/js/visualization.js"></script>
 
     </body>
 
     </html>
-    
