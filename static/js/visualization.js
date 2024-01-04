@@ -107,7 +107,7 @@ function danceChart(selectedDate){
 
     
     function draw() {
-    background(300); //THIS MAKES THE BACKGROUND BOX OF FIG DARK/TRANSPARENT
+    background(196, 171, 182); //THIS MAKES THE BACKGROUND BOX OF FIG DARK/TRANSPARENT
     // HIGHER THE NUMBER, BACKGROUND IS TRANSPARENT
 
     // Draw the dancing girl based on the dance array

@@ -19,7 +19,7 @@
     <img src="static/css/banner.png" alt="dashboard banner" class="banner">
     <div>
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-12">
           <div class="well">
             <h3>Choose a Date to Begin!</h3>
             <select id="selDataset" onchange="optionChanged(this.value)"></select>
@@ -28,14 +28,17 @@
         <div class="row">
         <div class="col-md">
           <h1> Featured Countries </h1>
+          <img src="static/css/map_example.jpeg" alt="example map" class="map">
           <div id="world-map"></div>
         </div>
         <div class="column">
           <h1> Top 10 Artists of the Day </h1>
+          <img src="static/css/barchart_ver_1.jpg" alt="example bar" class="bar_chart">
           <div id="bar"></div>
         </div>
         <div class="column">
           <h1> Top 10 Genres of the Day </h1>
+          <img src="static/css/Pie-chart.jpg" alt="example pie" class="pie_chart">
           <div id="pieChart"></div>
         </div>
         <div class="row">
@@ -45,11 +48,10 @@
     </div>
 
 
-
    
    
 
-    <p><b>JSON Music Data here -></b> <a href="/api/v1.0/spotify_music_data" target="_blank"> /api/v1.0/spotify_music_data</a> </p>
+    <!-- <p><b>JSON Music Data here -></b> <a href="/api/v1.0/spotify_music_data" target="_blank"> /api/v1.0/spotify_music_data</a> </p> -->
 
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
