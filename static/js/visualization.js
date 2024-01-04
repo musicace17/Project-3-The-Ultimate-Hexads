@@ -107,7 +107,7 @@ function danceChart(selectedDate){
 
     
     function draw() {
-    background(196, 171, 182); //THIS MAKES THE BACKGROUND BOX OF FIG DARK/TRANSPARENT
+    background(152, 149, 200); //THIS MAKES THE BACKGROUND BOX OF FIG DARK/TRANSPARENT
     // HIGHER THE NUMBER, BACKGROUND IS TRANSPARENT
 
     // Draw the dancing girl based on the dance array
@@ -139,7 +139,7 @@ function danceChart(selectedDate){
         arc(width / 2, height / 2 - bodyHeight / 2 - headSize / 2 + 10, 20, 10, 0, PI);
 
         // Body with rotation
-        fill('#8B00FF');
+        fill('#605AD7');
         push(); // Save the current transformation state
         translate(width / 2, height / 2 - bodyHeight / 2);
         rotate(radians(bodyRotation));
@@ -229,7 +229,7 @@ function danceChart(selectedDate){
             margin: { t:0 },
             width: 900,
             height: 400,
-            title: "Song Information for selected Date.",
+            // title: "Song Information for selected Date.",
             xaxis: { title: 'Danceability' },
             yaxis: { title: 'Energy' },
             margin: { t:30 },
