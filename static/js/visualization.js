@@ -107,7 +107,8 @@ function pieChart(selectedDate) {
             .append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
   
-        const color = d3.scaleOrdinal(d3.schemeBlues[9]); 
+        const color = d3.scaleOrdinal().domain([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+        .range(['#FDC367', '#E8A17A', '#C26F61', '#D499A0', '#D499BD', '#A774C5', '#84648B', '#524056', '#444096', '#605AD7']);
         const pie = d3.pie().value(d => d.count);
         const arc = d3.arc().innerRadius(0).outerRadius(Math.min(width, height) / 2 - 1);
   
@@ -268,6 +269,14 @@ function danceChart(selectedDate){
         console.log("popularity array:", popularityArray);
         console.log("song names:", songnameArray);
 
+        colorscale = [
+            [0, 'rgb(253, 195, 103)'],
+            [0.25, 'rgb(194, 111, 97)'],
+            [0.5, 'rgb(212, 153, 160)'],
+            [0.75, 'rgb(82, 64, 86)'],
+            [1, 'rgb(96, 90, 215)']
+        ]
+
         const tracebu = {
             x: danceArray,//dancebility
             y: energyArray, //energy
@@ -275,7 +284,7 @@ function danceChart(selectedDate){
             marker: {
               size: popularityArray, //popularity
               color: danceArray,  // Assigning color based on danceArray
-              colorscale: 'Rainbow'
+              colorscale: colorscale
             },
             text: songnameArray, //info like song name
             type: 'scatter'
@@ -303,7 +312,7 @@ function danceChart(selectedDate){
 function optionChanged(date) {
     // worldMap(date)
     // barChart(date)
-    // pieChart(date)
+    pieChart(date)
     danceChart(date)
 };
 

@@ -46,6 +46,13 @@ div {
   width: 50%;
 }
 
+#pieChart {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 #worldMap {
   height: 50vh;
   width: 60vw;
