@@ -43,7 +43,6 @@ function init() {
  
     // call make charts functions with first date
     // worldMap(firstDate)
-    // barChart(firstDate)
     pieChart(firstDate)
     danceChart(firstDate)
 });
@@ -66,8 +65,6 @@ function getUniqueValuesWithLoop(inputArray) {
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // create worldMap function
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// create barChart function
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 // create pieChart function
@@ -166,8 +163,7 @@ function danceChart(selectedDate){
 
     
     function draw() {
-    background(152, 149, 200); //THIS MAKES THE BACKGROUND BOX OF FIG DARK/TRANSPARENT
-    // HIGHER THE NUMBER, BACKGROUND IS TRANSPARENT
+    background(152, 149, 200); 
 
     // Draw the dancing girl based on the dance array
     drawDancingGirl(danceArray[frameCount % danceArray.length]);
@@ -311,7 +307,6 @@ function danceChart(selectedDate){
 // create optionChanged function and call chart functions
 function optionChanged(date) {
     // worldMap(date)
-    // barChart(date)
     pieChart(date)
     danceChart(date)
 };

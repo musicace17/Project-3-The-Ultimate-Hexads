@@ -1,9 +1,4 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
     background-image: url("background_lightpurple.png")
   }
 
@@ -48,8 +43,7 @@ div {
 
 #pieChart {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 400px;
   width: 50%;
 }
 
