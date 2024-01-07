@@ -4,6 +4,8 @@ let energyArray = [];
 let popularityArray = [];
 let songnameArray = [];
 let bodyRotation = 0; // Initial rotation for body movement
+let MAPcountryArray = [];
+let worldMap;
 
 const url = "/api/v1.0/spotify_music_data";
 
@@ -42,7 +44,6 @@ function init() {
     let firstDate = uniqueValues[0];
  
     // call make charts functions with first date
-    // worldMap(firstDate)
     pieChart(firstDate)
     danceChart(firstDate)
 });
@@ -63,9 +64,6 @@ function getUniqueValuesWithLoop(inputArray) {
     return uniqueValuesArray;
 }
 
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-// create worldMap function
-// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 // create pieChart function
 function pieChart(selectedDate) {
@@ -128,12 +126,13 @@ function pieChart(selectedDate) {
     });
   }
 
-// create danceChart function
+// create danceChart function with worldMap included
 function danceChart(selectedDate){
     danceArray = [];
     energyArray = [];
     popularityArray = [];
     songnameArray = [];
+    MAPcountryArray = [];
     
     bodyRotation = 0; 
     d3.json(url).then(function(data) {
@@ -144,19 +143,92 @@ function danceChart(selectedDate){
                 energyArray[j] = data[i].energy
                 popularityArray[j] = data[i].popularity
                 songnameArray[j] = data[i].name
+                MAPcountryArray[j] = data[i].country
                 j+=1;
             }    
         }
     
-    danceArray = danceArray.slice(0,25);
-    energyArray = energyArray.slice(0,25);
-    popularityArray = popularityArray.slice(0,25);
-    songnameArray = songnameArray.slice(0,25);
+        // Sort the daily ranks and song names in tandem
+        for (let i = 0; i < danceArray.length - 1; i++) {
+            for (let j = 0; j < danceArray.length - 1 - i; j++) {
+                if (danceArray[j] < danceArray[j + 1]) {
+                    // Swap elements if they are in the wrong order
+                    const tempd = danceArray[j];
+                    danceArray[j] = danceArray[j + 1];
+                    danceArray[j + 1] = tempd;
+  
+                    const tempe = energyArray[j];
+                    energyArray[j] = energyArray[j + 1];
+                    energyArray[j + 1] = tempe;
+  
+                    const tempp = popularityArray[j];
+                    popularityArray[j] = popularityArray[j + 1];
+                    popularityArray[j + 1] = tempp;
+  
+                    const temps = songnameArray[j];
+                    songnameArray[j] = songnameArray[j + 1];
+                    songnameArray[j + 1] = temps;
+  
+                    const tempm = MAPcountryArray[j];
+                    MAPcountryArray[j] = MAPcountryArray[j + 1];
+                    MAPcountryArray[j + 1] = tempm;
+                }
+            }
+        }
+  
+    danceArray = danceArray.slice(0,50);
+    energyArray = energyArray.slice(0,50);
+    popularityArray = popularityArray.slice(0,50);
+    songnameArray = songnameArray.slice(0,50);
+    MAPcountryArray = MAPcountryArray.slice(0,50);
+    
+    // worldMap creation
+    // Clear the existing map before initializing a new one
+    if (worldMap) {
+      worldMap.remove();
+    }
+  
+    // Initialize the map
+    worldMap = L.map('worldMap').setView([15, 5], 2);
+  
+    // Add tile layer
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+    }).addTo(worldMap);
+  
+    // Filter the countries (features) based on the ISO_A2 property matching the sliced MAPcountryArray
+    var filteredFeatures = filteredGeoJSONData.features.filter(feature => {
+      return feature.properties && MAPcountryArray.includes(feature.properties.ISO_A2);
+    });
+  
+    // Load geoJSON data to create outlines of the top 50 countries
+    var geojsonLayer = L.geoJSON({
+      type: 'FeatureCollection',
+      features: filteredFeatures
+    }, {
+      style: function (feature) {
+        return {
+          color: 'yellow',
+          weight: 1,
+          fillOpacity: 0.25
+        };
+      },
+    }).addTo(worldMap);
+    
+    // Adding a click event listener for each feature (country)
+    geojsonLayer.eachLayer(function (layer) {
+      layer.on('click', function (e) {
+        var countryName = e.target.feature.properties.ADMIN;
+        var popupcontent = '<b style="font-size: 14px;">Country:</b><br><b style="font-size: 16px;">' + countryName + '</b>';
+        L.popup().setLatLng(e.latlng).setContent(popupcontent).openOn(worldMap);
+      });
+    });
     bubbleChart();
     return danceArray;
-
+  
     }); //For d3
 }
+
     function setup() {
         createCanvas(400, 400);
     }
@@ -306,7 +378,6 @@ function danceChart(selectedDate){
 
 // create optionChanged function and call chart functions
 function optionChanged(date) {
-    // worldMap(date)
     pieChart(date)
     danceChart(date)
 };
