@@ -27,12 +27,13 @@ Developing this dashboard required minimal focus on privacy and transparency as,
 ### Individual Contributions
 - Project Proposal — Audrey, Lindsey
 - Data Cleaning — Carter, Mita
-- Database Creation — Omar, Mita
+- Database Creation — Omar, Mita, Anita
 - Flask App Creation — Mita, Anita
 - Dropdown menu — Mita, Anita
-- World Map Visualization — Carter
+- World Map Visualization — Carter, Mita
 - PieChart Visualization — Lindsey
-- Danceability Visualization — Mita, Anita
+- Danceability "Betty" Visualization — Mita, Anita
+- Danceabilty Bubble Chart Visualization — Mita, Anita
 - Front-end Code — Audrey
 - Project Documentation, including README file — Lindsey
 - Presentation Slides — Audrey
