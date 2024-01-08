@@ -5,6 +5,9 @@
 ### Overview
 Welcome to our Spotify Insights Dashboard! This user-friendly dashboard is designed to provide a seamless experience for users interested in exploring the dynamic world of music. With a simple date selection feature, viewers can delve into comprehensive insights about the Top 50 Spotify songs across 70+ countries. The dashboard offers a visually rich interface displaying the geographical distribution of listeners on an interactive map, along with detailed analytics on top genres and danceability insights for the selected date. Whether you're a music enthusiast, data analyst, or simply curious about global music preferences, our dashboard aims to deliver an engaging and informative experience. Dive in and explore the captivating mosaic of Spotify's top tracks worldwide!
 
+![Dashboard screenshot 1](https://github.com/musicace17/Project-3-The-Ultimate-Hexads/blob/main/screenshots/dashboard_screenshot1.png)
+![Dashboard screenshot 2](https://github.com/musicace17/Project-3-The-Ultimate-Hexads/blob/main/screenshots/dashboard_screenshot2.png)
+
 ### Purpose
 The primary objective of our project is to empower musicians, including our team's two seasoned professionals (Audrey B. and Carter J.), by providing a comprehensive understanding of global music trends. In the ever-evolving music landscape, staying on top of the latest hits and genres holds significant relevance for performers. This knowledge proves particularly advantageous for tailoring performances at diverse events, such as weddings. By understanding the global musical pulse, musicians can strategically connect with their audience, ensuring a contemporary and resonant musical experience. Our project serves as a valuable resource, offering performers the insights needed to navigate diverse audiences with precision and relevance.
 
